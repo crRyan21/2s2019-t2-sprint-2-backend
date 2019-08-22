@@ -10,18 +10,14 @@ using Senai.Sstop.WebApi.Repositories;
 namespace Senai.Sstop.WebApi.Controllers
 {
     [Route("api/[controller]")]
-    [Produces("application/json")]  
+    [Produces("application/json")]
     [ApiController]
     public class EstilosController : ControllerBase
     {
-        List<EstiloDomain> estilos = new List<EstiloDomain>()
-        {
-            new EstiloDomain { IdEstilo = 1, Nome = "Rock" }
-            ,new EstiloDomain { IdEstilo = 2, Nome = "Pop" }
-        };
-
+        
         EstiloRepository EstiloRepository = new EstiloRepository();
 
+        // GET /api/estilos
         [HttpGet]
         public IEnumerable<EstiloDomain> Listar()
         {
@@ -29,10 +25,14 @@ namespace Senai.Sstop.WebApi.Controllers
             return EstiloRepository.Listar();
         }
 
+        // GET /api/estilos/1
         [HttpGet("{id}")]
         public IActionResult BuscarPorId(int id)
         {
-            //buscando a lista do banco de dados
+            // lista fixa
+            // EstiloDomain Estilo = estilos.Find(x => x.IdEstilo == id);
+
+            // do banco de dados
             EstiloDomain Estilo = EstiloRepository.BuscarPorId(id);
             if (Estilo == null)
             {
@@ -41,42 +41,40 @@ namespace Senai.Sstop.WebApi.Controllers
             return Ok(Estilo);
         }
 
-        //[HttpPost]
-       // public IActionResult Cadastrar(EstiloDomain estiloDomain)
-       // {
-        //    estilos.Add(new EstiloDomain
-        //    {
-        //        IdEstilo = estilos.Count + 1,
-        //        Nome = estiloDomain.Nome }
-        //    );
-        //    return Ok(estilos);
-       // }
-
+        // POST /api/estilos
         [HttpPost]
+        // public IActionResult Cadastrar([FromBody] EstiloDomain estiloDomain)
         public IActionResult Cadastrar(EstiloDomain estiloDomain)
         {
+            // do banco de dados
             EstiloRepository.Cadastrar(estiloDomain);
             return Ok();
         }
 
+        // ATUALIZAR
+        // PUT /api/estilos
+        // { "idEstiloMusical" : "", "nome" : ""}
+        // PUT /api/estilos/1 {"nome" : "Estilo A"}
+        /// <summary>
+        /// Atualizar um novo estilo.
+        /// </summary>
+        /// <param name="estiloDomain">EstiloDomain</param>
+        /// <returns></returns>
+        [HttpPut]
         public IActionResult Atualizar(EstiloDomain estiloDomain)
         {
             EstiloRepository.Alterar(estiloDomain);
             return Ok();
         }
 
+        // DELETAR
+        // DELETE /api/estilos/1009
         [HttpDelete("{id}")]
         public IActionResult Deletar(int id)
         {
             EstiloRepository.Deletar(id);
             return Ok();
         }
-
-        //[HttpGet]
-        //public string Get()
-        //{
-        //    return "Requisição Recebida";
-        //}
 
     }
 }
