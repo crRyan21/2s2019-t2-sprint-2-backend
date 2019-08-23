@@ -1,0 +1,14 @@
+C:\Users\46864796817\Desktop\Meu Git\Sprint2\2s2019-t2-sprint-2-backend\Senai.Livros.Api\Senai.Livros.Api\bin\Debug\netcoreapp2.1\Senai.Livros.Api.deps.json
+C:\Users\46864796817\Desktop\Meu Git\Sprint2\2s2019-t2-sprint-2-backend\Senai.Livros.Api\Senai.Livros.Api\bin\Debug\netcoreapp2.1\Senai.Livros.Api.runtimeconfig.json
+C:\Users\46864796817\Desktop\Meu Git\Sprint2\2s2019-t2-sprint-2-backend\Senai.Livros.Api\Senai.Livros.Api\bin\Debug\netcoreapp2.1\Senai.Livros.Api.runtimeconfig.dev.json
+C:\Users\46864796817\Desktop\Meu Git\Sprint2\2s2019-t2-sprint-2-backend\Senai.Livros.Api\Senai.Livros.Api\bin\Debug\netcoreapp2.1\Senai.Livros.Api.dll
+C:\Users\46864796817\Desktop\Meu Git\Sprint2\2s2019-t2-sprint-2-backend\Senai.Livros.Api\Senai.Livros.Api\obj\Debug\netcoreapp2.1\Senai.Livros.Api.csprojAssemblyReference.cache
+C:\Users\46864796817\Desktop\Meu Git\Sprint2\2s2019-t2-sprint-2-backend\Senai.Livros.Api\Senai.Livros.Api\obj\Debug\netcoreapp2.1\Senai.Livros.Api.csproj.CoreCompileInputs.cache
+C:\Users\46864796817\Desktop\Meu Git\Sprint2\2s2019-t2-sprint-2-backend\Senai.Livros.Api\Senai.Livros.Api\obj\Debug\netcoreapp2.1\Senai.Livros.Api.RazorAssemblyInfo.cache
+C:\Users\46864796817\Desktop\Meu Git\Sprint2\2s2019-t2-sprint-2-backend\Senai.Livros.Api\Senai.Livros.Api\obj\Debug\netcoreapp2.1\Senai.Livros.Api.RazorAssemblyInfo.cs
+C:\Users\46864796817\Desktop\Meu Git\Sprint2\2s2019-t2-sprint-2-backend\Senai.Livros.Api\Senai.Livros.Api\obj\Debug\netcoreapp2.1\Senai.Livros.Api.AssemblyInfoInputs.cache
+C:\Users\46864796817\Desktop\Meu Git\Sprint2\2s2019-t2-sprint-2-backend\Senai.Livros.Api\Senai.Livros.Api\obj\Debug\netcoreapp2.1\Senai.Livros.Api.AssemblyInfo.cs
+C:\Users\46864796817\Desktop\Meu Git\Sprint2\2s2019-t2-sprint-2-backend\Senai.Livros.Api\Senai.Livros.Api\obj\Debug\netcoreapp2.1\Senai.Livros.Api.RazorTargetAssemblyInfo.cache
+C:\Users\46864796817\Desktop\Meu Git\Sprint2\2s2019-t2-sprint-2-backend\Senai.Livros.Api\Senai.Livros.Api\bin\Debug\netcoreapp2.1\Senai.Livros.Api.pdb
+C:\Users\46864796817\Desktop\Meu Git\Sprint2\2s2019-t2-sprint-2-backend\Senai.Livros.Api\Senai.Livros.Api\obj\Debug\netcoreapp2.1\Senai.Livros.Api.dll
+C:\Users\46864796817\Desktop\Meu Git\Sprint2\2s2019-t2-sprint-2-backend\Senai.Livros.Api\Senai.Livros.Api\obj\Debug\netcoreapp2.1\Senai.Livros.Api.pdb
