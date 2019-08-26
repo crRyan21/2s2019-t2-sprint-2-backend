@@ -65,7 +65,7 @@ namespace Senai.Sstop.WebApi.Repositories
                 // abre a conexao
                 con.Open();
                 // qtd de registros
-                cmd.ExecuteNonQuery();
+                cmd.ExecuteNonQuery();  
             }
         }
     }
