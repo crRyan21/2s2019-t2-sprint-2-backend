@@ -42,9 +42,9 @@ namespace Senai.ManualPecas.WebApi
 
                     ClockSkew = TimeSpan.FromDays(30),
 
-                    ValidIssuer = "ManualPecas.WebApi",
+                    ValidIssuer = "manualPecas.WebApi",
 
-                    ValidAudience = "ManualPecas.WebApi"
+                    ValidAudience = "manualPecas.WebApi"
                 };
             });
 
@@ -68,7 +68,7 @@ namespace Senai.ManualPecas.WebApi
 
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Ekips API V1");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "ManualPecas API V1");
             });
 
             app.UseMvc();
