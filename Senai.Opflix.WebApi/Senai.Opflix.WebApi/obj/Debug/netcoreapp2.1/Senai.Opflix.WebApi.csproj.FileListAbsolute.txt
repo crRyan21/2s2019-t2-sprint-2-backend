@@ -1,0 +1,14 @@
+C:\Users\46864796817\Desktop\Meu Git\Sprint2\2s2019-t2-sprint-2-backend\Senai.Opflix.WebApi\Senai.Opflix.WebApi\bin\Debug\netcoreapp2.1\Senai.Opflix.WebApi.deps.json
+C:\Users\46864796817\Desktop\Meu Git\Sprint2\2s2019-t2-sprint-2-backend\Senai.Opflix.WebApi\Senai.Opflix.WebApi\bin\Debug\netcoreapp2.1\Senai.Opflix.WebApi.runtimeconfig.json
+C:\Users\46864796817\Desktop\Meu Git\Sprint2\2s2019-t2-sprint-2-backend\Senai.Opflix.WebApi\Senai.Opflix.WebApi\bin\Debug\netcoreapp2.1\Senai.Opflix.WebApi.runtimeconfig.dev.json
+C:\Users\46864796817\Desktop\Meu Git\Sprint2\2s2019-t2-sprint-2-backend\Senai.Opflix.WebApi\Senai.Opflix.WebApi\bin\Debug\netcoreapp2.1\Senai.Opflix.WebApi.dll
+C:\Users\46864796817\Desktop\Meu Git\Sprint2\2s2019-t2-sprint-2-backend\Senai.Opflix.WebApi\Senai.Opflix.WebApi\obj\Debug\netcoreapp2.1\Senai.Opflix.WebApi.csprojAssemblyReference.cache
+C:\Users\46864796817\Desktop\Meu Git\Sprint2\2s2019-t2-sprint-2-backend\Senai.Opflix.WebApi\Senai.Opflix.WebApi\obj\Debug\netcoreapp2.1\Senai.Opflix.WebApi.csproj.CoreCompileInputs.cache
+C:\Users\46864796817\Desktop\Meu Git\Sprint2\2s2019-t2-sprint-2-backend\Senai.Opflix.WebApi\Senai.Opflix.WebApi\obj\Debug\netcoreapp2.1\Senai.Opflix.WebApi.RazorAssemblyInfo.cache
+C:\Users\46864796817\Desktop\Meu Git\Sprint2\2s2019-t2-sprint-2-backend\Senai.Opflix.WebApi\Senai.Opflix.WebApi\obj\Debug\netcoreapp2.1\Senai.Opflix.WebApi.RazorAssemblyInfo.cs
+C:\Users\46864796817\Desktop\Meu Git\Sprint2\2s2019-t2-sprint-2-backend\Senai.Opflix.WebApi\Senai.Opflix.WebApi\obj\Debug\netcoreapp2.1\Senai.Opflix.WebApi.AssemblyInfoInputs.cache
+C:\Users\46864796817\Desktop\Meu Git\Sprint2\2s2019-t2-sprint-2-backend\Senai.Opflix.WebApi\Senai.Opflix.WebApi\obj\Debug\netcoreapp2.1\Senai.Opflix.WebApi.AssemblyInfo.cs
+C:\Users\46864796817\Desktop\Meu Git\Sprint2\2s2019-t2-sprint-2-backend\Senai.Opflix.WebApi\Senai.Opflix.WebApi\obj\Debug\netcoreapp2.1\Senai.Opflix.WebApi.RazorTargetAssemblyInfo.cache
+C:\Users\46864796817\Desktop\Meu Git\Sprint2\2s2019-t2-sprint-2-backend\Senai.Opflix.WebApi\Senai.Opflix.WebApi\bin\Debug\netcoreapp2.1\Senai.Opflix.WebApi.pdb
+C:\Users\46864796817\Desktop\Meu Git\Sprint2\2s2019-t2-sprint-2-backend\Senai.Opflix.WebApi\Senai.Opflix.WebApi\obj\Debug\netcoreapp2.1\Senai.Opflix.WebApi.dll
+C:\Users\46864796817\Desktop\Meu Git\Sprint2\2s2019-t2-sprint-2-backend\Senai.Opflix.WebApi\Senai.Opflix.WebApi\obj\Debug\netcoreapp2.1\Senai.Opflix.WebApi.pdb

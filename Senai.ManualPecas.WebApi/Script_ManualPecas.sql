@@ -1,8 +1,8 @@
 CREATE DATABASE ManualPecas
-GO
+
 
 USE ManualPecas
-GO
+
 
 CREATE TABLE Usuarios
 (
