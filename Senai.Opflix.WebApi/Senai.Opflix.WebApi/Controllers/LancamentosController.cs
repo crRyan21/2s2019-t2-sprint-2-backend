@@ -8,28 +8,27 @@ using Microsoft.AspNetCore.Mvc;
 using Senai.Opflix.WebApi.Domains;
 using Senai.Opflix.WebApi.Interfaces;
 using Senai.Opflix.WebApi.Repositories;
-
 namespace Senai.Opflix.WebApi.Controllers
 {
     [Route("api/[controller]")]
     [Produces("application/json")]
     [ApiController]
-    public class UsuariosController : ControllerBase
+    public class LancamentosController : ControllerBase
     {
-        public IUsuarioRepository UsuarioRepository { get; set; }
+        public ILancamentoRepository LancamentoRepository { get; set; }
 
-        public UsuariosController()
+        public LancamentosController()
         {
-            UsuarioRepository = new UsuarioRepository();
+            LancamentoRepository = new LancamentoRepository();
         }
 
         [Authorize(Roles = "ADMINISTRADOR")]
         [HttpPost]
-        public IActionResult Cadastrar(Usuarios usuario)
+        public IActionResult Cadastrar(Lancamentos lancamento)
         {
             try
             {
-                UsuarioRepository.Cadastrar(usuario);
+                LancamentoRepository.Cadastrar(lancamento);
                 return Ok();
             }
             catch (Exception ex)
@@ -37,25 +36,22 @@ namespace Senai.Opflix.WebApi.Controllers
                 return BadRequest(new { mensagem = ex.Message });
             }
         }
-
-        [Authorize(Roles = "ADMINISTRADOR")]
+        [Authorize]
         [HttpGet]
         public IActionResult Listar()
         {
-            return Ok(UsuarioRepository.Listar());
+            return Ok(LancamentoRepository.Listar());
         }
-
-
-        [Authorize(Roles = "ADMINISTRADOR")]
+        [Authorize]
         [HttpGet("{id}")]
         public IActionResult BuscarPorId(int id)
         {
             try
             {
-                Usuarios usuario = UsuarioRepository.BuscarPorId(id);
-                if (usuario == null)
+                Lancamentos lancamento = LancamentoRepository.BuscarPorId(id);
+                if (lancamento == null)
                     return NotFound();
-                return Ok(usuario);
+                return Ok(lancamento);
             }
             catch (Exception ex)
             {
@@ -68,9 +64,9 @@ namespace Senai.Opflix.WebApi.Controllers
         {
             try
             {
-                if (UsuarioRepository.BuscarPorId(id) == null)
+                if (LancamentoRepository.BuscarPorId(id) == null)
                     return NotFound();
-                UsuarioRepository.Deletar(id);
+                LancamentoRepository.Deletar(id);
                 return Ok();
             }
             catch (Exception ex)
@@ -80,14 +76,14 @@ namespace Senai.Opflix.WebApi.Controllers
         }
         [Authorize(Roles = "ADMINISTRADOR")]
         [HttpPut("{id}")]
-        public IActionResult Atualizar(Usuarios usuario,int id)
+        public IActionResult Atualizar(Lancamentos lancamento, int id)
         {
             try
             {
-                Usuarios usuarioBuscado = UsuarioRepository.BuscarPorId(id);
-                if (usuarioBuscado == null)
+                Lancamentos lancamentoBuscado = LancamentoRepository.BuscarPorId(id);
+                if (lancamentoBuscado == null)
                     return NotFound();
-                UsuarioRepository.Atualizar(usuario);
+                LancamentoRepository.Atualizar(lancamento);
                 return Ok();
             }
             catch (Exception ex)
@@ -95,6 +91,5 @@ namespace Senai.Opflix.WebApi.Controllers
                 return BadRequest(new { mensagem = ex.Message });
             }
         }
-
     }
 }

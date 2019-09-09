@@ -54,6 +54,22 @@ namespace Senai.Opflix.WebApi.Repositories
                 return ctx.Usuarios.Find(id);
             }
         }
+        public void Atualizar(Usuarios usuario)
+        {
+            using (OpflixContext ctx = new OpflixContext())
+            {
+                Usuarios usuarioBuscado = ctx.Usuarios.FirstOrDefault(x => x.IdUsuario == usuario.IdUsuario);
+
+                usuarioBuscado.Nome = usuario.Nome;
+                usuarioBuscado.Email = usuario.Email;
+                usuarioBuscado.Telefone = usuario.Telefone;
+                usuarioBuscado.Cep = usuario.Cep;
+                usuarioBuscado.Numero = usuario.Numero;
+                usuarioBuscado.Permissao = usuario.Permissao;
+                ctx.Usuarios.Update(usuarioBuscado);
+                ctx.SaveChanges();
+            }
+        }
 
     }
 }

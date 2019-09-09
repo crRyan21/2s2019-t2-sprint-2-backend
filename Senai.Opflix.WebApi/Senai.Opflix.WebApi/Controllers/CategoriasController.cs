@@ -9,27 +9,29 @@ using Senai.Opflix.WebApi.Domains;
 using Senai.Opflix.WebApi.Interfaces;
 using Senai.Opflix.WebApi.Repositories;
 
+
 namespace Senai.Opflix.WebApi.Controllers
 {
     [Route("api/[controller]")]
     [Produces("application/json")]
     [ApiController]
-    public class UsuariosController : ControllerBase
+    public class CategoriasController : ControllerBase
     {
-        public IUsuarioRepository UsuarioRepository { get; set; }
+        public ICategoriaRepository CategoriaRepository { get; set; }
 
-        public UsuariosController()
+        public CategoriasController()
         {
-            UsuarioRepository = new UsuarioRepository();
+            CategoriaRepository = new CategoriaRepository();
         }
+
 
         [Authorize(Roles = "ADMINISTRADOR")]
         [HttpPost]
-        public IActionResult Cadastrar(Usuarios usuario)
+        public IActionResult Cadastrar(Categorias categoria)
         {
             try
             {
-                UsuarioRepository.Cadastrar(usuario);
+                CategoriaRepository.Cadastrar(categoria);
                 return Ok();
             }
             catch (Exception ex)
@@ -37,25 +39,22 @@ namespace Senai.Opflix.WebApi.Controllers
                 return BadRequest(new { mensagem = ex.Message });
             }
         }
-
-        [Authorize(Roles = "ADMINISTRADOR")]
+        [Authorize]
         [HttpGet]
         public IActionResult Listar()
         {
-            return Ok(UsuarioRepository.Listar());
+            return Ok(CategoriaRepository.Listar());
         }
-
-
-        [Authorize(Roles = "ADMINISTRADOR")]
+        [Authorize]
         [HttpGet("{id}")]
         public IActionResult BuscarPorId(int id)
         {
             try
             {
-                Usuarios usuario = UsuarioRepository.BuscarPorId(id);
-                if (usuario == null)
+                Categorias categoria = CategoriaRepository.BuscarPorId(id);
+                if (categoria == null)
                     return NotFound();
-                return Ok(usuario);
+                return Ok(categoria);
             }
             catch (Exception ex)
             {
@@ -68,9 +67,9 @@ namespace Senai.Opflix.WebApi.Controllers
         {
             try
             {
-                if (UsuarioRepository.BuscarPorId(id) == null)
+                if (CategoriaRepository.BuscarPorId(id) == null)
                     return NotFound();
-                UsuarioRepository.Deletar(id);
+                CategoriaRepository.Deletar(id);
                 return Ok();
             }
             catch (Exception ex)
@@ -80,14 +79,14 @@ namespace Senai.Opflix.WebApi.Controllers
         }
         [Authorize(Roles = "ADMINISTRADOR")]
         [HttpPut("{id}")]
-        public IActionResult Atualizar(Usuarios usuario,int id)
+        public IActionResult Atualizar(Categorias categoria, int id)
         {
             try
             {
-                Usuarios usuarioBuscado = UsuarioRepository.BuscarPorId(id);
-                if (usuarioBuscado == null)
+                Categorias categoriaBuscada = CategoriaRepository.BuscarPorId(id);
+                if (categoriaBuscada == null)
                     return NotFound();
-                UsuarioRepository.Atualizar(usuario);
+                CategoriaRepository.Atualizar(categoria);
                 return Ok();
             }
             catch (Exception ex)
@@ -95,6 +94,5 @@ namespace Senai.Opflix.WebApi.Controllers
                 return BadRequest(new { mensagem = ex.Message });
             }
         }
-
     }
 }

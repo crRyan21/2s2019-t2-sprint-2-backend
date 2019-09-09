@@ -50,7 +50,7 @@ namespace Senai.Opflix.WebApi
 
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new Swashbuckle.AspNetCore.Swagger.Info { Title = "Ekips API", Version = "v1" });
+                c.SwaggerDoc("v1", new Swashbuckle.AspNetCore.Swagger.Info { Title = "Opflix API", Version = "v1" });
             });
         }
 

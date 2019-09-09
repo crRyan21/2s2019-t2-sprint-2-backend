@@ -42,13 +42,13 @@ namespace Senai.Opflix.WebApi.Controllers
                     new Claim(ClaimTypes.Role, usuarioBuscado.Permissao)
                 };
 
-                var key = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes("InLock-chave-autenticacao"));
+                var key = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes("Opflix-chave-autenticacao"));
 
                 var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
                 var token = new JwtSecurityToken(
-                    issuer: "InLock.WebApi",
-                    audience: "InLock.WebApi",
+                    issuer: "Opflix.WebApi",
+                    audience: "Opflix.WebApi",
                     claims: claims,
                     expires: DateTime.Now.AddDays(30),
                     signingCredentials: creds);

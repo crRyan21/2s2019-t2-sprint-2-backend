@@ -14,5 +14,6 @@ namespace Senai.Opflix.WebApi.Interfaces
         List<Usuarios> Listar();
         void Deletar(int id);
         Usuarios BuscarPorId(int id);
+        void Atualizar(Usuarios usuario);
     }
 }
