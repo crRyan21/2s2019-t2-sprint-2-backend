@@ -13,6 +13,11 @@ namespace Senai.Opflix.WebApi.Interfaces
         void Deletar(int id);
         Lancamentos BuscarPorId(int id);
         void Atualizar(Lancamentos lancamentos);
+        List<Lancamentos> ListarPorData();
+        void CadastrarFavorito(ListaFavoritos favorito);
+        List<ListaFavoritos> ListarFavoritos();
+        ListaFavoritos BuscarFavoritoPorUsuario(int id);
+        List<Lancamentos> FiltrarPorMidia();
 
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace Senai.Opflix.WebApi.Domains
 {
@@ -11,6 +12,7 @@ namespace Senai.Opflix.WebApi.Domains
         public string Sinopse { get; set; }
         public int? IdCategoria { get; set; }
         public string Duracao { get; set; }
+        [Required(ErrorMessage = "A data de lançamento é requerida.")]
         public DateTime DataLancamento { get; set; }
         public int? IdPlataform { get; set; }
         public List<ListaFavoritos> ListaFavoritos { get; set; }
@@ -18,5 +20,6 @@ namespace Senai.Opflix.WebApi.Domains
         public Categorias IdCategoriaNavigation { get; set; }
         public Plataformas IdPlataformNavigation { get; set; }
         public TipoTitulo IdTipoTituloNavigation { get; set; }
+        public Plataformas Plataformas { get; set; }
     }
 }
