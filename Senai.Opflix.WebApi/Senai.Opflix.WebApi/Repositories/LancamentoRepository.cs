@@ -26,11 +26,12 @@ namespace Senai.Opflix.WebApi.Repositories
         {
             using (OpflixContext ctx = new OpflixContext())
             {
-                return ctx.Lancamentos.ToList();
+                return ctx.Lancamentos.Include(x => x.IdPlataformNavigation).ToList();
             }
         }
        
         
+
         public void Deletar(int id)
         {
             using (OpflixContext ctx = new OpflixContext())
@@ -114,7 +115,7 @@ namespace Senai.Opflix.WebApi.Repositories
                         {
                             IdLancamento = Convert.ToInt32(sdr["IdLancamento"]),
                             Nome = sdr["Nome"].ToString(),
-                            Plataformas = new Plataformas
+                            IdPlataformNavigation = new Plataformas
                             {
                                 IdPlataform = Convert.ToInt32(sdr["IdPlataform"]),
                                 Nome = sdr["Nome"].ToString()
